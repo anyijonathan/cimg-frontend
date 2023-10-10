@@ -9,7 +9,7 @@ pipeline {
 
     stage('build docker image') {
       steps {
-        sh 'docker build -t cimg-frontend .'
+        sh 'docker build -t cimg-frontend . -t anyijonathan/cimg_frontend:latest'
       }
     }
 

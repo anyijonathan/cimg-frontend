@@ -24,5 +24,11 @@ pipeline {
       }
     }
 
+    stage('push image to dockerHub') {
+      steps {
+        sh 'docker push anyijonathan/cimg_frontend:latest'
+      }
+    }
+
   }
 }

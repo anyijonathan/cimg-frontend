@@ -1,24 +1,24 @@
-# pull official base image
-FROM node:13.12.0-alpine
+# Use a compatible Node.js version
+FROM node:20.5.0-alpine
 
-# set working directory
+# Set working directory
 WORKDIR /app
+
+# Expose necessary ports
 EXPOSE 80
 EXPOSE 443
 EXPOSE 3000
 
-# add `/app/node_modules/.bin` to $PATH
+# Add `/app/node_modules/.bin` to $PATH
 ENV PATH /app/node_modules/.bin:$PATH
 
-# install app dependencies
-
+# Install app dependencies
 COPY package-lock.json ./
 COPY package.json ./
-RUN npm install -g npm@latest
+RUN npm install
 
-# add app
+# Add app
 COPY . ./
 
-# start app
-CMD ["npm", "start"]    
-
+# Start app
+CMD ["npm", "start"]

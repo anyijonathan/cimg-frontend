@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: agencybanking
+  labels: 
+    app: agencybanking
+spec:
+  selector:
+    app: agencybanking
+  type: LoadBalancer
+  ports:
+  - name: http
+    port: 80
+spec:
+  selector:
+    app: agencybanking
+  type: LoadBalancer
+  ports:
+  - name: http
+    port: 80    
+  
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: agencybanking
+  labels:
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: agencybanking
+  template:
+    metadata:
+      labels:
+        app: agencybanking
+        version: v1
+    spec:
+      containers:
+      - name: agencybanking
+        image: 986798253017.dkr.ecr.us-east-1.amazonaws.com/devops_practice:latest
+        ports:
+        - containerPort: 80 
+        
+        

@@ -1,0 +1,27 @@
+{
+  "vendors": [
+    {
+      "id": 0,
+      "vendorName": "CIMGEDIT",
+      "description": "CIMGEDIT",
+      "approvedStatus": 0,
+      "msidn": null,
+      "correlationId": null
+    },
+    {
+      "vendorName": "VAS2NET4",
+      "description": "VAS2NET4",
+      "id": 4
+    },
+    {
+      "vendorName": "VAS2NET4",
+      "description": "VAS2NET4",
+      "id": 5
+    },
+    {
+      "vendorName": "VAS2NET4",
+      "description": "VAS2NET4",
+      "id": 6
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "General Sans", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a:focus svg {
+  fill: white;
+}
+
+.bg-purple-600 {
+  color: white !important;
+  background: #5c068c;
+}
+
+.linear-gradient-text {
+  background: linear-gradient(89.92deg, #60088c 0.07%, #a11e90 92.22%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.bg-transparent {
+  background: transparent !important;
+}
+
+.bg-vendorInfo {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    #5c068c;
+}
+
+.newfee-button {
+  width: 8.6875rem !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.transaction-select {
+  margin-right: 1.23rem !important;
+}
+
+.react-datepicker__day--selected {
+  background: #5c068c !important;
+}
+
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Place the loader on top of everything */
+  opacity: 10
+}

@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_cimg_frontend_1699304378668-push-trigger-input-set
+  identifier: Build_cimg_frontend_1699304378668pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: testdiglab
+  pipeline:
+    identifier: Build_cimg_frontend_1699304378668
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>

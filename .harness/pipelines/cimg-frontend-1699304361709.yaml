@@ -1,0 +1,33 @@
+pipeline:
+  identifier: Build_cimg_frontend_1699304378668
+  name: Build cimg-frontend
+  orgIdentifier: default
+  projectIdentifier: testdiglab
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1699304346895
+        repoName: cimg-frontend
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI

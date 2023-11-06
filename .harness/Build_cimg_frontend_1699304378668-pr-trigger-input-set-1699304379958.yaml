@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_cimg_frontend_1699304378668-pr-trigger-input-set
+  identifier: Build_cimg_frontend_1699304378668prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: testdiglab
+  pipeline:
+    identifier: Build_cimg_frontend_1699304378668
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
